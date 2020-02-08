@@ -1,0 +1,119 @@
+#sidebar
+{
+    position: fixed;
+    width:200px;
+    height:150%;
+    background: #151719;
+    
+    left:-200px;
+}
+
+
+#sidebar ul li{
+    color:rgba(230,230,230,0.9);
+    list-style-type: none;
+    margin:0%;
+    padding:15px 10px;
+    border-bottom: 1px solid rgba(100,100,100,0.8);
+}
+#sidebar .toggle-btn
+{
+    position: absolute;
+    left:230px;
+    top:20px;
+}
+#sidebar.active
+{
+    left:0px;
+}
+#sidebar .toggle-btn span{
+    width:30px;
+    height:5px;
+    display: block;
+    background: #151719;
+    margin:3px 0px;
+
+
+}
+body{
+    margin: 5px;
+    padding:0;
+    background: #efefef;
+    font-size:16px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    background-image: url("wood.jpg");
+}
+head{
+    margin-bottom: 5%;
+    top:0;
+}
+form{
+    
+    
+    text-align: left;
+    margin: 7%;
+    height:150%;
+    width: 85%;
+    box-shadow: 10px 10px 5px grey;
+    background-color: white;
+}
+
+
+#diar
+{
+
+width: 80%;
+height: 70%;
+margin-left:10%;
+border-color: black;
+border-radius: 25px;
+box-shadow:10px 10px 5px grey ;
+text-indent: 20px;
+}
+
+#tit
+{
+    margin-left:    10%; 
+    box-shadow:10px 10px 5px grey ;
+    display:block;
+    box-sizing: border-box;
+    margin-bottom:20px;
+    margin-top: 20px;
+    padding:4px;
+    width:220px;
+    height:32px;
+    border-radius: 25px;
+    border-color:black;
+}
+
+#styling
+{
+    border-bottom: 3px solid  grey;
+    margin:4%;
+    
+    
+}
+#persona
+{
+    font:italic;
+    color: black;
+}
+footer
+{
+    background: #151719;
+     color:white;
+}
+input[type="button"],
+input[type="submit"]
+{
+    
+    margin:2%;
+    border-radius: 25px;
+    width: 8%;
+    height:3%;
+    border-color: rgb(173, 167, 167);
+    color :solid black;
+
+}

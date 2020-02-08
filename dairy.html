@@ -1,0 +1,80 @@
+
+<html>
+    <div id='sidebar' >
+        <div class='toggle-btn' onclick="toggle_sidebar();">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul>
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>VIEW</li>
+                
+            </ul>
+    </div>
+    
+    <head>
+        <h1 id='persona' ><i>PERSONA</i></h1>
+        <link rel="stylesheet" type="text/css" href="diary.css">
+        <h1 id='date_head'> </h1>
+        
+    </head>
+    <body>
+           
+        <form method="POST">
+                
+            <div id="styling" >
+            <center>
+            <input type="button" value="B" id="bold-btn" onclick="document.execCommand('bold',false,null);" ></button>
+            <input type="button" value="I" title="italic" onclick="document.execCommand('italic',false,null);">
+            <input type="button" value="U" title="underline" onclick="document.execCommand('underline',false,null);">
+            <input type="button" value="Highlight" title="highlight text" onclick="document.execCommand('backcolor',false,'yellow');" >
+            <input type="button" value="Link" title="create link" onclick="link();">
+            <input type="button" value="Unlink" title="undo link" onclick="document.execCommand('unlink',false,null);" >
+        </center>
+    </div>
+           <div id="tit" contenteditable="true" >title</div>
+           <div  id="diar" contenteditable="true">your diary page....</div> 
+           
+                
+          <center>
+           <input type="submit" value="SUBMIT">
+        </center>
+        
+        </form>
+    <footer>&copy <i>PERSONA</i></footer>
+    </body>
+    <script type="text/javascript">
+  
+    function link()
+    {
+        var link=prompt("enter a link","http://www.");
+        document.execCommand('createlink',false,link);
+    }
+     function toggle_sidebar()
+    {
+        document.getElementById('sidebar').classList.toggle('active');
+        
+    }
+    
+    var d=new Date();
+    var day=d.getDate();
+    var month=d.getMonth()+1;
+    var year=d.getFullYear();
+    var hours=d.getHours();
+    var minutes=d.getMinutes();
+    if(hours<12)
+    {
+        var session='am';
+    }
+    else{
+        var session='pm';
+    }
+    document.getElementById('date_head').innerHTML=day+"/"+month+"/"+year+"<br>"+hours+":"+minutes+" "+session;
+    document.getElementById("diar").style.border = " solid black";
+    document.getElementById("tit").style.border = " solid black";
+ 
+    </script>
+</html>
